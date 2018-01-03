@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Up Down">
+        <menu>
+            <item
+                android:id="@+id/up"
+                android:icon="@drawable/ic_menu_up"
+                android:title="Up"/>
+            <item
+                android:id="@+id/down"
+                android:icon="@drawable/ic_menu_down"
+                android:title="Down"/>
+        </menu>
+    </item>
+    <item android:title="Left Right">
+        <menu>
+            <item
+                android:id="@+id/left"
+                android:icon="@drawable/ic_menu_left"
+                android:title="Left"/>
+            <item
+                android:id="@+id/right"
+                android:icon="@drawable/ic_menu_right"
+                android:title="Right"/>
+        </menu>
+    </item>
+
+</menu>

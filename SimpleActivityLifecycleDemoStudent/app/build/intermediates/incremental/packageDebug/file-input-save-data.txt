@@ -1,0 +1,30 @@
+#Internal package file, do not edit.
+#Thu Nov 30 19:11:59 AEDT 2017
+2.base=C\:\\Users\\deep\\Documents\\GitHub\\FIT2081\\SimpleActivityLifecycleDemoStudent\\app\\build\\intermediates\\res\\resources-debug.ap_
+5.file=C\:\\Users\\deep\\Documents\\GitHub\\FIT2081\\SimpleActivityLifecycleDemoStudent\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\menu\\test_menu.xml
+5.set=ANDROID_RESOURCE
+3.base=C\:\\Users\\deep\\Documents\\GitHub\\FIT2081\\SimpleActivityLifecycleDemoStudent\\app\\build\\intermediates\\res\\resources-debug.ap_
+6.file=C\:\\Users\\deep\\Documents\\GitHub\\FIT2081\\SimpleActivityLifecycleDemoStudent\\app\\build\\intermediates\\res\\resources-debug.ap_\\AndroidManifest.xml
+2.set=ANDROID_RESOURCE
+4.base=C\:\\Users\\deep\\Documents\\GitHub\\FIT2081\\SimpleActivityLifecycleDemoStudent\\app\\build\\intermediates\\res\\resources-debug.ap_
+7.file=C\:\\Users\\deep\\Documents\\GitHub\\FIT2081\\SimpleActivityLifecycleDemoStudent\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_5e0eee392dcc8af711fdcf3c830445a03369c8fb\\classes.dex
+7.set=DEX
+count=9
+0.file=C\:\\Users\\deep\\Documents\\GitHub\\FIT2081\\SimpleActivityLifecycleDemoStudent\\app\\build\\intermediates\\res\\resources-debug.ap_\\resources.arsc
+5.base=C\:\\Users\\deep\\Documents\\GitHub\\FIT2081\\SimpleActivityLifecycleDemoStudent\\app\\build\\intermediates\\res\\resources-debug.ap_
+8.file=C\:\\Users\\deep\\Documents\\GitHub\\FIT2081\\SimpleActivityLifecycleDemoStudent\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\test_partial_layout.xml
+4.set=ANDROID_RESOURCE
+6.base=C\:\\Users\\deep\\Documents\\GitHub\\FIT2081\\SimpleActivityLifecycleDemoStudent\\app\\build\\intermediates\\res\\resources-debug.ap_
+1.file=C\:\\Users\\deep\\Documents\\GitHub\\FIT2081\\SimpleActivityLifecycleDemoStudent\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_cd0e3c750fded7c790a54454fa1341e013a8692f\\classes.dex
+1.set=DEX
+7.base=C\:\\Users\\deep\\Documents\\GitHub\\FIT2081\\SimpleActivityLifecycleDemoStudent\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_5e0eee392dcc8af711fdcf3c830445a03369c8fb
+2.file=C\:\\Users\\deep\\Documents\\GitHub\\FIT2081\\SimpleActivityLifecycleDemoStudent\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\test_full_layout.xml
+6.set=ANDROID_RESOURCE
+0.base=C\:\\Users\\deep\\Documents\\GitHub\\FIT2081\\SimpleActivityLifecycleDemoStudent\\app\\build\\intermediates\\res\\resources-debug.ap_
+8.base=C\:\\Users\\deep\\Documents\\GitHub\\FIT2081\\SimpleActivityLifecycleDemoStudent\\app\\build\\intermediates\\res\\resources-debug.ap_
+3.file=C\:\\Users\\deep\\Documents\\GitHub\\FIT2081\\SimpleActivityLifecycleDemoStudent\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\main.xml
+3.set=ANDROID_RESOURCE
+1.base=C\:\\Users\\deep\\Documents\\GitHub\\FIT2081\\SimpleActivityLifecycleDemoStudent\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_cd0e3c750fded7c790a54454fa1341e013a8692f
+4.file=C\:\\Users\\deep\\Documents\\GitHub\\FIT2081\\SimpleActivityLifecycleDemoStudent\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-xhdpi-v4\\ic_launcher.png
+8.set=ANDROID_RESOURCE
+0.set=ANDROID_RESOURCE

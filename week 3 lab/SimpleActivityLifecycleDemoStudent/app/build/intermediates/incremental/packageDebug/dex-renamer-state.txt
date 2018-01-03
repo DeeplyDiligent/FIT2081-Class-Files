@@ -1,0 +1,7 @@
+#Tue Dec 05 20:55:18 AEDT 2017
+base.0=C\:\\Users\\deep\\Documents\\GitHub\\FIT2081\\week 3 lab\\SimpleActivityLifecycleDemoStudent\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_ff4196281b156173dbc32ac7f2cc9eee97a7d1d1
+renamed.1=classes.dex
+renamed.0=classes2.dex
+file.1=C\:\\Users\\deep\\Documents\\GitHub\\FIT2081\\week 3 lab\\SimpleActivityLifecycleDemoStudent\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_85e7255e038ad4c390803c3f53ef1f73281f7595\\classes.dex
+base.1=C\:\\Users\\deep\\Documents\\GitHub\\FIT2081\\week 3 lab\\SimpleActivityLifecycleDemoStudent\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_85e7255e038ad4c390803c3f53ef1f73281f7595
+file.0=C\:\\Users\\deep\\Documents\\GitHub\\FIT2081\\week 3 lab\\SimpleActivityLifecycleDemoStudent\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_ff4196281b156173dbc32ac7f2cc9eee97a7d1d1\\classes.dex

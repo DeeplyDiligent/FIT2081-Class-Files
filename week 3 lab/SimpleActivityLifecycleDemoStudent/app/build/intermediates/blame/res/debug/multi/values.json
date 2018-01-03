@@ -1,0 +1,485 @@
+[
+    {
+        "outputFile": "C:\\Users\\deep\\Google Drive\\All files\\Uni\\FIT2081\\Week 3\\SimpleActivityLifecycleDemoStudent\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endLine": 10,
+                    "endColumn": 19,
+                    "endOffset": 385
+                },
+                "from": {
+                    "file": "C:\\Users\\deep\\Google Drive\\All files\\Uni\\FIT2081\\Week 3\\SimpleActivityLifecycleDemoStudent\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 297,
+                        "endLine": 15,
+                        "endColumn": 19,
+                        "endOffset": 635
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 11,
+                    "startColumn": 4,
+                    "startOffset": 390,
+                    "endColumn": 38,
+                    "endOffset": 424
+                },
+                "from": {
+                    "file": "C:\\Users\\deep\\Google Drive\\All files\\Uni\\FIT2081\\Week 3\\SimpleActivityLifecycleDemoStudent\\app\\src\\main\\res\\values\\dimens.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 57,
+                        "endColumn": 38,
+                        "endOffset": 91
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 12,
+                    "startColumn": 4,
+                    "startOffset": 429,
+                    "endColumn": 40,
+                    "endOffset": 465
+                },
+                "from": {
+                    "file": "C:\\Users\\deep\\Google Drive\\All files\\Uni\\FIT2081\\Week 3\\SimpleActivityLifecycleDemoStudent\\app\\src\\main\\res\\values\\dimens.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 97,
+                        "endColumn": 40,
+                        "endOffset": 133
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 13,
+                    "startColumn": 4,
+                    "startOffset": 470,
+                    "endColumn": 52,
+                    "endOffset": 518
+                },
+                "from": {
+                    "file": "C:\\Users\\deep\\Google Drive\\All files\\Uni\\FIT2081\\Week 3\\SimpleActivityLifecycleDemoStudent\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 57,
+                        "endColumn": 52,
+                        "endOffset": 105
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 14,
+                    "startColumn": 4,
+                    "startOffset": 523,
+                    "endColumn": 60,
+                    "endOffset": 579
+                },
+                "from": {
+                    "file": "C:\\Users\\deep\\Google Drive\\All files\\Uni\\FIT2081\\Week 3\\SimpleActivityLifecycleDemoStudent\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 166,
+                        "endColumn": 60,
+                        "endOffset": 222
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 15,
+                    "startColumn": 4,
+                    "startOffset": 584,
+                    "endColumn": 65,
+                    "endOffset": 645
+                },
+                "from": {
+                    "file": "C:\\Users\\deep\\Google Drive\\All files\\Uni\\FIT2081\\Week 3\\SimpleActivityLifecycleDemoStudent\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 228,
+                        "endColumn": 65,
+                        "endOffset": 289
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 16,
+                    "startColumn": 4,
+                    "startOffset": 650,
+                    "endColumn": 53,
+                    "endOffset": 699
+                },
+                "from": {
+                    "file": "C:\\Users\\deep\\Google Drive\\All files\\Uni\\FIT2081\\Week 3\\SimpleActivityLifecycleDemoStudent\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 111,
+                        "endColumn": 53,
+                        "endOffset": 160
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 17,
+                    "startColumn": 4,
+                    "startOffset": 704,
+                    "endLine": 19,
+                    "endColumn": 12,
+                    "endOffset": 810
+                },
+                "from": {
+                    "file": "C:\\Users\\deep\\Google Drive\\All files\\Uni\\FIT2081\\Week 3\\SimpleActivityLifecycleDemoStudent\\app\\src\\main\\res\\values\\styles.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 115,
+                        "endLine": 5,
+                        "endColumn": 12,
+                        "endOffset": 223
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "outputFile": "C:\\Users\\deep\\Documents\\GitHub\\FIT2081\\SimpleActivityLifecycleDemoStudent\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endLine": 10,
+                    "endColumn": 19,
+                    "endOffset": 385
+                },
+                "from": {
+                    "file": "C:\\Users\\deep\\Documents\\GitHub\\FIT2081\\SimpleActivityLifecycleDemoStudent\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 297,
+                        "endLine": 15,
+                        "endColumn": 19,
+                        "endOffset": 635
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 11,
+                    "startColumn": 4,
+                    "startOffset": 390,
+                    "endColumn": 38,
+                    "endOffset": 424
+                },
+                "from": {
+                    "file": "C:\\Users\\deep\\Documents\\GitHub\\FIT2081\\SimpleActivityLifecycleDemoStudent\\app\\src\\main\\res\\values\\dimens.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 57,
+                        "endColumn": 38,
+                        "endOffset": 91
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 12,
+                    "startColumn": 4,
+                    "startOffset": 429,
+                    "endColumn": 40,
+                    "endOffset": 465
+                },
+                "from": {
+                    "file": "C:\\Users\\deep\\Documents\\GitHub\\FIT2081\\SimpleActivityLifecycleDemoStudent\\app\\src\\main\\res\\values\\dimens.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 97,
+                        "endColumn": 40,
+                        "endOffset": 133
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 13,
+                    "startColumn": 4,
+                    "startOffset": 470,
+                    "endColumn": 52,
+                    "endOffset": 518
+                },
+                "from": {
+                    "file": "C:\\Users\\deep\\Documents\\GitHub\\FIT2081\\SimpleActivityLifecycleDemoStudent\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 57,
+                        "endColumn": 52,
+                        "endOffset": 105
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 14,
+                    "startColumn": 4,
+                    "startOffset": 523,
+                    "endColumn": 60,
+                    "endOffset": 579
+                },
+                "from": {
+                    "file": "C:\\Users\\deep\\Documents\\GitHub\\FIT2081\\SimpleActivityLifecycleDemoStudent\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 166,
+                        "endColumn": 60,
+                        "endOffset": 222
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 15,
+                    "startColumn": 4,
+                    "startOffset": 584,
+                    "endColumn": 65,
+                    "endOffset": 645
+                },
+                "from": {
+                    "file": "C:\\Users\\deep\\Documents\\GitHub\\FIT2081\\SimpleActivityLifecycleDemoStudent\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 228,
+                        "endColumn": 65,
+                        "endOffset": 289
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 16,
+                    "startColumn": 4,
+                    "startOffset": 650,
+                    "endColumn": 53,
+                    "endOffset": 699
+                },
+                "from": {
+                    "file": "C:\\Users\\deep\\Documents\\GitHub\\FIT2081\\SimpleActivityLifecycleDemoStudent\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 111,
+                        "endColumn": 53,
+                        "endOffset": 160
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 17,
+                    "startColumn": 4,
+                    "startOffset": 704,
+                    "endLine": 19,
+                    "endColumn": 12,
+                    "endOffset": 810
+                },
+                "from": {
+                    "file": "C:\\Users\\deep\\Documents\\GitHub\\FIT2081\\SimpleActivityLifecycleDemoStudent\\app\\src\\main\\res\\values\\styles.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 115,
+                        "endLine": 5,
+                        "endColumn": 12,
+                        "endOffset": 223
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "outputFile": "C:\\Users\\deep\\Documents\\GitHub\\FIT2081\\week 3 lab\\SimpleActivityLifecycleDemoStudent\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endLine": 10,
+                    "endColumn": 19,
+                    "endOffset": 385
+                },
+                "from": {
+                    "file": "C:\\Users\\deep\\Documents\\GitHub\\FIT2081\\week 3 lab\\SimpleActivityLifecycleDemoStudent\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 297,
+                        "endLine": 15,
+                        "endColumn": 19,
+                        "endOffset": 635
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 11,
+                    "startColumn": 4,
+                    "startOffset": 390,
+                    "endColumn": 38,
+                    "endOffset": 424
+                },
+                "from": {
+                    "file": "C:\\Users\\deep\\Documents\\GitHub\\FIT2081\\week 3 lab\\SimpleActivityLifecycleDemoStudent\\app\\src\\main\\res\\values\\dimens.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 57,
+                        "endColumn": 38,
+                        "endOffset": 91
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 12,
+                    "startColumn": 4,
+                    "startOffset": 429,
+                    "endColumn": 40,
+                    "endOffset": 465
+                },
+                "from": {
+                    "file": "C:\\Users\\deep\\Documents\\GitHub\\FIT2081\\week 3 lab\\SimpleActivityLifecycleDemoStudent\\app\\src\\main\\res\\values\\dimens.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 97,
+                        "endColumn": 40,
+                        "endOffset": 133
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 13,
+                    "startColumn": 4,
+                    "startOffset": 470,
+                    "endColumn": 52,
+                    "endOffset": 518
+                },
+                "from": {
+                    "file": "C:\\Users\\deep\\Documents\\GitHub\\FIT2081\\week 3 lab\\SimpleActivityLifecycleDemoStudent\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 57,
+                        "endColumn": 52,
+                        "endOffset": 105
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 14,
+                    "startColumn": 4,
+                    "startOffset": 523,
+                    "endColumn": 60,
+                    "endOffset": 579
+                },
+                "from": {
+                    "file": "C:\\Users\\deep\\Documents\\GitHub\\FIT2081\\week 3 lab\\SimpleActivityLifecycleDemoStudent\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 166,
+                        "endColumn": 60,
+                        "endOffset": 222
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 15,
+                    "startColumn": 4,
+                    "startOffset": 584,
+                    "endColumn": 65,
+                    "endOffset": 645
+                },
+                "from": {
+                    "file": "C:\\Users\\deep\\Documents\\GitHub\\FIT2081\\week 3 lab\\SimpleActivityLifecycleDemoStudent\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 228,
+                        "endColumn": 65,
+                        "endOffset": 289
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 16,
+                    "startColumn": 4,
+                    "startOffset": 650,
+                    "endColumn": 53,
+                    "endOffset": 699
+                },
+                "from": {
+                    "file": "C:\\Users\\deep\\Documents\\GitHub\\FIT2081\\week 3 lab\\SimpleActivityLifecycleDemoStudent\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 111,
+                        "endColumn": 53,
+                        "endOffset": 160
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 17,
+                    "startColumn": 4,
+                    "startOffset": 704,
+                    "endLine": 19,
+                    "endColumn": 12,
+                    "endOffset": 810
+                },
+                "from": {
+                    "file": "C:\\Users\\deep\\Documents\\GitHub\\FIT2081\\week 3 lab\\SimpleActivityLifecycleDemoStudent\\app\\src\\main\\res\\values\\styles.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 115,
+                        "endLine": 5,
+                        "endColumn": 12,
+                        "endOffset": 223
+                    }
+                }
+            }
+        ]
+    }
+]

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="C:\Users\deep\Documents\GitHub\FIT2081\SimpleActivityLifecycleDemoStudent\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="510aa6efc159983dfbffa676a0dae37568c0a46f">
+        <dex dex="C:\Users\deep\Documents\GitHub\FIT2081\SimpleActivityLifecycleDemoStudent\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_5e0eee392dcc8af711fdcf3c830445a03369c8fb\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\deep\Documents\GitHub\FIT2081\SimpleActivityLifecycleDemoStudent\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="7090f3c62200300b92cc23397cd58f33f1805e6f">
+        <dex dex="C:\Users\deep\Documents\GitHub\FIT2081\SimpleActivityLifecycleDemoStudent\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_cd0e3c750fded7c790a54454fa1341e013a8692f\classes.dex" />
+    </item>
+
+</items>
