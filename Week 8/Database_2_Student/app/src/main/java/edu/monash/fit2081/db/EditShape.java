@@ -1,10 +1,10 @@
 package edu.monash.fit2081.db;
 
-import android.content.Intent;
+import android.content.ContentResolver;
+import android.content.ContentValues;
 import android.content.res.ColorStateList;
 import android.os.Bundle;
 import android.support.annotation.ColorInt;
-import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.text.TextUtils;
@@ -18,12 +18,9 @@ import android.widget.Toast;
 
 import com.thebluealliance.spectrum.SpectrumDialog;
 
-import edu.monash.fit2081.db.provider.ShapeValues;
-import edu.monash.fit2081.db.provider.ShapesDbHelper;
+import edu.monash.fit2081.db.provider.SchemeShapes;
 
 public class EditShape extends Fragment {
-    private ShapesDbHelper dbHelper;
-
     private TextView width_label;
     private EditText width_value;
 
@@ -53,12 +50,6 @@ public class EditShape extends Fragment {
 
     public EditShape() {
         // Required empty public constructor
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState){
-        super.onCreate(savedInstanceState);
-        dbHelper = new ShapesDbHelper(getContext());
     }
 
     @Override
@@ -130,13 +121,6 @@ public class EditShape extends Fragment {
         editShapeBtn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 updateShape(v);
-                EditDeleteShape editDeleteShape = new EditDeleteShape();
-                getActivity().getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.fragment_bottom, editDeleteShape, "editDeleteFragment")
-                        .addToBackStack("editDeleteFragment")
-                        .commit();
-
-
             }
         });
 
@@ -144,13 +128,10 @@ public class EditShape extends Fragment {
         // Return the layout for this fragment
         return v;
     }
-//    @Override
-//    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
-//        super.onViewCreated(view, savedInstanceState);
-//    }
-
 
     public void updateShape(View view) {
+        ContentResolver resolver = getActivity().getApplicationContext().getContentResolver();
+
         int xValueInt = Integer.parseInt(xValue.getText().toString());
         int yValueInt = Integer.parseInt(yValue.getText().toString());
         int borderValueInt = Integer.parseInt(borderValue.getText().toString());
@@ -166,22 +147,18 @@ public class EditShape extends Fragment {
         if (!TextUtils.isEmpty(height_value.getText().toString()))
             heightValueInt = Integer.parseInt(height_value.getText().toString());
 
-        ShapeValues shape = new ShapeValues();
-        shape.setId(Integer.parseInt(idStr));
-        shape.setShapeType(typeStr);
-        shape.setX(xValueInt);
-        shape.setY(yValueInt);
-        shape.setRadius(radiusValueInt);
-        shape.setWidth(widthValueInt);
-        shape.setHeight(heightValueInt);
-        shape.setBorder(borderValueInt);
-        shape.setColor(Integer.toString(selectedColor));
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(SchemeShapes.Shape.SHAPE_TYPE, typeStr);
+        contentValues.put(SchemeShapes.Shape.SHAPE_X, xValueInt);
+        contentValues.put(SchemeShapes.Shape.SHAPE_Y, yValueInt);
+        contentValues.put(SchemeShapes.Shape.SHAPE_RADIUS, radiusValueInt);
+        contentValues.put(SchemeShapes.Shape.SHAPE_WIDTH, widthValueInt);
+        contentValues.put(SchemeShapes.Shape.SHAPE_HEIGHT, heightValueInt);
+        contentValues.put(SchemeShapes.Shape.SHAPE_BORDER_THICKNESS, borderValueInt);
+        contentValues.put(SchemeShapes.Shape.SHAPE_COLOR, selectedColor);
 
-        dbHelper.updateShape(shape);
+        resolver.update(SchemeShapes.Shape.CONTENT_URI, contentValues, "_id=" + idStr, null);
 
-        ViewShapes ViewFrg ;
-        ViewFrg = (ViewShapes) getFragmentManager().findFragmentByTag("viewFragment");
-        ViewFrg.reDraw();
     }
 
 
@@ -248,7 +225,6 @@ public class EditShape extends Fragment {
                     public void onColorSelected(boolean positiveResult, @ColorInt int color) {
                         if (positiveResult) {
                             selectedColor = color;
-                            //colorBtn.setBackgroundColor(selectedColor);
                             colorBtn.setBackgroundTintList(ColorStateList.valueOf(selectedColor));
                         } else {
                             Toast.makeText(getContext(), "Dialog cancelled", Toast.LENGTH_SHORT).show();

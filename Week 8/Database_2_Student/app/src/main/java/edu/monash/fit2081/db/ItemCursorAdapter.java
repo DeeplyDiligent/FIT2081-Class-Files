@@ -1,5 +1,6 @@
 package edu.monash.fit2081.db;
 
+import android.content.ContentResolver;
 import android.content.Context;
 import android.database.Cursor;
 import android.os.Bundle;
@@ -10,17 +11,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CursorAdapter;
-import android.widget.ListView;
 import android.widget.TextView;
 
 import edu.monash.fit2081.db.provider.SchemeShapes;
-import edu.monash.fit2081.db.provider.ShapesDbHelper;
 
 
 public class ItemCursorAdapter extends CursorAdapter {
 
-    private ShapesDbHelper dbHelper;
-    private ListView listView;
     private Context myContext;
     private FragmentManager myFragmentManager;
 
@@ -28,7 +25,6 @@ public class ItemCursorAdapter extends CursorAdapter {
         super(context, cursor, 0);
         myContext = context;
         myFragmentManager = fMgr;
-        dbHelper = new ShapesDbHelper(myContext);
     }
 
 
@@ -93,32 +89,22 @@ public class ItemCursorAdapter extends CursorAdapter {
                 bundle.putString("height", height);
                 bundle.putString("boarderWidth", borderWidth);
                 bundle.putString("color", color);
-                Fragment editShape= new EditShape();
+                Fragment editShape = new EditShape();
 
                 //pack all the data for an edit operation then go to the EditShape fragment
                 editShape.setArguments(bundle); //pack all the data for an edit operation
-                myFragmentManager.beginTransaction()
-                        .replace(R.id.fragment_bottom, editShape,"editShape")
-                        .addToBackStack("editShape")
-                        .commit();
+                myFragmentManager.beginTransaction().replace(R.id.fragment_bottom, editShape, "editShape").addToBackStack("editShape").commit();
             }
         });
     }
 
 
     public void deleteShape(String id) {
-        dbHelper.deleteShape(Integer.parseInt(id));
-
         //now update currently visible fragments
         //bottom fragment - the Edit/Delete ListView
-        EditDeleteShape deleteFrg ;
-        deleteFrg = (EditDeleteShape) myFragmentManager.findFragmentByTag("editDeleteFragment");
-        deleteFrg.LoadListShapes();
 
-        //top fragment - the canvas
-        ViewShapes ViewFrg ;
-        ViewFrg = (ViewShapes) myFragmentManager.findFragmentByTag("viewFragment");
-        ViewFrg.reDraw();
+        ContentResolver resolver = myContext.getApplicationContext().getContentResolver();
+        resolver.delete(SchemeShapes.Shape.CONTENT_URI, SchemeShapes.Shape.ID + " = ? ", new String[]{id});
     }
 
 }

@@ -76,41 +76,57 @@ public class ShapesDbHelper extends SQLiteOpenHelper {
         //of opening and closing a database as quickly as possible so as not to lock out other users
         SQLiteDatabase db = this.getWritableDatabase();
 
+
         long newID = db.insert(SchemeShapes.Shape.TABLE_NAME, null, contentValues);
         shape.setId((int) newID);
         db.close();
     }
 
     public boolean deleteShape(int shapeID) {
+
         boolean result = false; //did the delete succeed or not
 
         //your code here
         SQLiteDatabase db = this.getWritableDatabase();
+//        Cursor shapes = db.rawQuery("select * from " + SchemeShapes.Shape.TABLE_NAME + "where" + SchemeShapes.Shape.ID + "=" + shapeID, null);
 
-
-        db.delete(SchemeShapes.Shape.TABLE_NAME, SchemeShapes.Shape.ID + "=" + shapeID, null);
+        int rowsEffected = db.delete(SchemeShapes.Shape.TABLE_NAME, SchemeShapes.Shape.ID + "=" + shapeID, null);
+        if(rowsEffected > 0){
+            result = true;
+        }
 
         return result;
     }
 
     public Cursor getAllShapes() {
         SQLiteDatabase db = this.getReadableDatabase();
-
-        Cursor shapes = db.rawQuery("select * from " + SchemeShapes.Shape.TABLE_NAME, null);
+        String query = "select * from " + SchemeShapes.Shape.TABLE_NAME;
+        Cursor shapes = db.rawQuery(query, null);
 
         return shapes;
     }
 
     //update method requires record data to be packed into a ContentValues data structure
     public boolean updateShape(ShapeValues shape) {
-        boolean result = false; //did the edit succeed or not
+
+        ContentValues contentValues = new ContentValues();
+
+        contentValues.put(SchemeShapes.Shape.SHAPE_TYPE, shape.getShapeType());
+        contentValues.put(SchemeShapes.Shape.SHAPE_X, shape.getX());
+        contentValues.put(SchemeShapes.Shape.SHAPE_Y, shape.getY());
+        contentValues.put(SchemeShapes.Shape.SHAPE_RADIUS, shape.getRadius());
+        contentValues.put(SchemeShapes.Shape.SHAPE_WIDTH, shape.getWidth());
+        contentValues.put(SchemeShapes.Shape.SHAPE_HEIGHT, shape.getHeight());
+        contentValues.put(SchemeShapes.Shape.SHAPE_BORDER_THICKNESS, shape.getBorder());
+        contentValues.put(SchemeShapes.Shape.SHAPE_COLOR, shape.getColor());
+
+
+        boolean result = false; //did the edit succeed or not=
 
         SQLiteDatabase db = this.getWritableDatabase();
 
-        deleteShape(shape.getId());
-        addShape(shape);
+        db.update(SchemeShapes.Shape.TABLE_NAME, contentValues, SchemeShapes.Shape.ID + "=" + shape.getId(),null);
         result = true;
-
 
         return result;
     }
