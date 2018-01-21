@@ -74,7 +74,6 @@ public class ShapesProvider extends ContentProvider {
     //
     @Override
     public Cursor query(Uri uri, String[] projection, String selection, String[] selectionArgs, String sortOrder) {
-
         // Use SQLiteQueryBuilder for querying db
         SQLiteQueryBuilder queryBuilder = new SQLiteQueryBuilder();
 

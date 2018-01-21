@@ -28,6 +28,8 @@ public class MainActivity extends AppCompatActivity {
     int numberOfCircles = 0;
     int maxAreaRect = 0;
     int numberOfRect = 0;
+    Cursor c;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -52,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 onRetrieveCircles();
-                displayText.setText("There are "+numberOfCircles+" circles. \nMax radius is "+maxRadius+".");
+                displayText.setText("There are " + numberOfCircles + " circles. \nMax radius is " + maxRadius + ".");
             }
         });
         Button rect = (Button) findViewById(R.id.button_rect);
@@ -60,40 +62,29 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 onRetrieveRect();
-                displayText.setText("There are "+ numberOfRect+" rectangles. \nMax area is "+maxAreaRect+".");
+                displayText.setText("There are " + numberOfRect + " rectangles. \nMax area is " + maxAreaRect + ".");
             }
         });
 
     }
 
-    private void onRetrieveCircles(){
+    private void onRetrieveCircles() {
+        c = getContentResolver().query(SchemeShapes.Shape.CONTENT_URI, null, null, null, null);
         maxRadius = 0;
-        numberOfCircles =0;
+        numberOfCircles = 0;
         // Use SQLiteQueryBuilder for querying db
         SQLiteQueryBuilder queryBuilder = new SQLiteQueryBuilder();
 
         // Set the table name
         queryBuilder.setTables(SchemeShapes.Shape.TABLE_NAME);
 
-        Cursor c = getContentResolver().query(SchemeShapes.Shape.CONTENT_URI, null, null, null,null);
 
         if (c.moveToFirst()) {
-            do{
-//                ContentValues contentValues = new ContentValues();
-//
-//                contentValues.put(SchemeShapes.Shape.SHAPE_TYPE, c.getString(c.getColumnIndex(SchemeShapes.Shape.SHAPE_TYPE)));
-//                contentValues.put(SchemeShapes.Shape.SHAPE_X, c.getString(c.getColumnIndex(SchemeShapes.Shape.SHAPE_X)));
-//                contentValues.put(SchemeShapes.Shape.SHAPE_Y, c.getString(c.getColumnIndex(SchemeShapes.Shape.SHAPE_Y)));
-//                contentValues.put(SchemeShapes.Shape.SHAPE_RADIUS, c.getString(c.getColumnIndex(SchemeShapes.Shape.SHAPE_RADIUS)));
-//                contentValues.put(SchemeShapes.Shape.SHAPE_WIDTH, c.getString(c.getColumnIndex(SchemeShapes.Shape.SHAPE_WIDTH)));
-//                contentValues.put(SchemeShapes.Shape.SHAPE_HEIGHT, c.getString(c.getColumnIndex(SchemeShapes.Shape.SHAPE_HEIGHT)));
-//                contentValues.put(SchemeShapes.Shape.SHAPE_BORDER_THICKNESS, c.getString(c.getColumnIndex(SchemeShapes.Shape.SHAPE_BORDER_THICKNESS)));
-//                contentValues.put(SchemeShapes.Shape.SHAPE_COLOR, c.getString(c.getColumnIndex(SchemeShapes.Shape.SHAPE_COLOR)));
-//
-//                shapes.add(contentValues);
-                if(c.getString(c.getColumnIndex(SchemeShapes.Shape.SHAPE_TYPE)).equalsIgnoreCase("circle")){
+            do {
+
+                if (c.getString(c.getColumnIndex(SchemeShapes.Shape.SHAPE_TYPE)).equalsIgnoreCase("circle")) {
                     int radiusOfCircle = Integer.parseInt(c.getString(c.getColumnIndex(SchemeShapes.Shape.SHAPE_RADIUS)));
-                    if (maxRadius<radiusOfCircle){
+                    if (maxRadius < radiusOfCircle) {
                         maxRadius = radiusOfCircle;
                     }
                     numberOfCircles++;
@@ -101,13 +92,14 @@ public class MainActivity extends AppCompatActivity {
             } while (c.moveToNext());
         }
     }
-    private void onRetrieveRect(){
-        numberOfRect= 0;
+
+    private void onRetrieveRect() {
+        numberOfRect = 0;
         maxAreaRect = 0;
-        Cursor c = getContentResolver().query(SchemeShapes.Shape.CONTENT_URI, null, null, null,null);
+        Cursor c = getContentResolver().query(SchemeShapes.Shape.CONTENT_URI, null, null, null, null);
 
         if (c.moveToFirst()) {
-            do{
+            do {
 //                ContentValues contentValues = new ContentValues();
 //
 //                contentValues.put(SchemeShapes.Shape.SHAPE_TYPE, c.getString(c.getColumnIndex(SchemeShapes.Shape.SHAPE_TYPE)));
@@ -120,10 +112,10 @@ public class MainActivity extends AppCompatActivity {
 //                contentValues.put(SchemeShapes.Shape.SHAPE_COLOR, c.getString(c.getColumnIndex(SchemeShapes.Shape.SHAPE_COLOR)));
 //
 //                shapes.add(contentValues);
-                if(c.getString(c.getColumnIndex(SchemeShapes.Shape.SHAPE_TYPE)).equalsIgnoreCase("rectangle")){
+                if (c.getString(c.getColumnIndex(SchemeShapes.Shape.SHAPE_TYPE)).equalsIgnoreCase("rectangle")) {
                     int areaofRect = Integer.parseInt(c.getString(c.getColumnIndex(SchemeShapes.Shape.SHAPE_WIDTH)))
                             * Integer.parseInt(c.getString(c.getColumnIndex(SchemeShapes.Shape.SHAPE_HEIGHT)));
-                    if (maxAreaRect<areaofRect){
+                    if (maxAreaRect < areaofRect) {
                         maxAreaRect = areaofRect;
                     }
                     numberOfRect++;

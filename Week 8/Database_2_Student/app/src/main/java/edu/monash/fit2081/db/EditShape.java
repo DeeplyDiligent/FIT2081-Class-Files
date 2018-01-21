@@ -130,7 +130,6 @@ public class EditShape extends Fragment {
     }
 
     public void updateShape(View view) {
-        ContentResolver resolver = getActivity().getApplicationContext().getContentResolver();
 
         int xValueInt = Integer.parseInt(xValue.getText().toString());
         int yValueInt = Integer.parseInt(yValue.getText().toString());
@@ -157,8 +156,9 @@ public class EditShape extends Fragment {
         contentValues.put(SchemeShapes.Shape.SHAPE_BORDER_THICKNESS, borderValueInt);
         contentValues.put(SchemeShapes.Shape.SHAPE_COLOR, selectedColor);
 
-        resolver.update(SchemeShapes.Shape.CONTENT_URI, contentValues, "_id=" + idStr, null);
 
+        ContentResolver resolver = getActivity().getApplicationContext().getContentResolver();
+        resolver.update(SchemeShapes.Shape.CONTENT_URI, contentValues, "_id=" + idStr, null);
     }
 
 
