@@ -1,0 +1,220 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             xmlns:tools="http://schemas.android.com/tools"
+                                             android:id="@+id/activity_update_shape"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="match_parent"
+                                             tools:context="edu.monash.fit2081.db.EditShape">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/update_radioGroup"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/update_radio_circle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Circle"/>
+
+        <RadioButton
+            android:id="@+id/update_radio_rectangle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rectangle"/>
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/update_x_label"
+        android:layout_width="26dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:text="X"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/update_radioGroup"/>
+
+    <EditText
+        android:id="@+id/update_x_value"
+        android:layout_width="63dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:contentDescription="Number"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBaseline_toBaselineOf="@+id/update_x_label"
+        app:layout_constraintLeft_toRightOf="@+id/update_x_label"/>
+
+    <TextView
+        android:id="@+id/update_width_label"
+        android:layout_width="51dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:text="Width"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/update_border_label"/>
+
+    <TextView
+        android:id="@+id/update_radius_label"
+        android:layout_width="51dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:text="Radius "
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/update_border_label"/>
+
+    <TextView
+        android:id="@+id/update_border_label"
+        android:layout_width="51dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:text="Border"
+        android:contentDescription="Number"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/update_x_label"/>
+
+    <EditText
+        android:id="@+id/update_width_value"
+        android:layout_width="44dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:contentDescription="Number"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBaseline_toBaselineOf="@+id/update_width_label"
+        app:layout_constraintLeft_toRightOf="@+id/update_width_label"/>
+
+    <EditText
+        android:id="@+id/update_border_value"
+        android:layout_width="44dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:contentDescription="Number"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBaseline_toBaselineOf="@+id/update_border_label"
+        app:layout_constraintLeft_toRightOf="@+id/update_border_label"/>
+
+    <EditText
+        android:id="@+id/update_radius_value"
+        android:layout_width="44dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:contentDescription="Number"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBaseline_toBaselineOf="@+id/update_radius_label"
+        app:layout_constraintLeft_toRightOf="@+id/update_radius_label"/>
+
+  <!--  <Button
+        android:id="@+id/update_shape_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="Update Shape"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>-->
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/update_shape_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:src="@drawable/ic_update"
+        app:fabSize="normal"
+        app:layout_anchorGravity="bottom|right|end"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+
+
+    <TextView
+        android:id="@+id/update_y_label"
+        android:layout_width="52dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="8dp"
+        android:text="Y"
+        app:layout_constraintLeft_toRightOf="@+id/update_x_value"
+        app:layout_constraintTop_toTopOf="@+id/update_x_label"/>
+
+    <EditText
+        android:id="@+id/update_y_value"
+        android:layout_width="83dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="8dp"
+        android:ems="10"
+        android:contentDescription="Number"
+        android:inputType="number"
+        app:layout_constraintBaseline_toBaselineOf="@+id/update_y_label"
+        app:layout_constraintLeft_toRightOf="@+id/update_y_label"/>
+
+    <TextView
+        android:id="@+id/update_height_label"
+        android:layout_width="58dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:text="Height"
+        app:layout_constraintLeft_toRightOf="@+id/update_width_value"
+        app:layout_constraintTop_toTopOf="@+id/update_width_label"/>
+
+    <EditText
+        android:id="@+id/update_height_value"
+        android:layout_width="66dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBaseline_toBaselineOf="@+id/update_height_label"
+        app:layout_constraintLeft_toRightOf="@+id/update_height_label"/>
+<!--
+    <Button
+        android:id="@+id/update_selected_color"
+        android:layout_width="93dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:onClick="showSelectColor"
+        android:text="Color"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toRightOf="@+id/update_border_value"
+        app:layout_constraintTop_toTopOf="@+id/update_border_label"/>-->
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/update_selected_color"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:clickable="true"
+        android:onClick="showSelectColor"
+        android:src="@drawable/ic_color"
+        app:fabSize="normal"
+        app:layout_anchorGravity="bottom|right|end"
+        app:layout_constraintLeft_toRightOf="@+id/y_value"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp"/>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="275dp"/>
+
+</android.support.constraint.ConstraintLayout>
+
+
+
