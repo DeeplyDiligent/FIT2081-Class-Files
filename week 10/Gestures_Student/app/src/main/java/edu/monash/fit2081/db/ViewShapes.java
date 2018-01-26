@@ -180,8 +180,9 @@ public class ViewShapes extends Fragment implements LoaderManager.LoaderCallback
 
     //GESTURE STUFF
     class MyGestureListener extends GestureDetector.SimpleOnGestureListener {
+
         @Override
-        public boolean onSingleTapUp(MotionEvent e) {
+        public boolean onSingleTapConfirmed(MotionEvent e) {
             int x = (int) e.getX();
             int y = (int) e.getY();
             int height = customView.getHeight();
