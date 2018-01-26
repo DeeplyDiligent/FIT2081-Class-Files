@@ -15,6 +15,10 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 public class ShapesDbHelper extends SQLiteOpenHelper {
+    @Override
+    public void onCreate(SQLiteDatabase db) {
+        db.execSQL(SHAPES_TABLE_CREATE);
+    }
     // Database name and version
     private final static String DB_NAME = "ShapesDB.db";
     private final static int DB_VERSION = 1;
@@ -41,10 +45,7 @@ public class ShapesDbHelper extends SQLiteOpenHelper {
         super(context, DB_NAME, null, DB_VERSION); //null = default cursor
     }
 
-    @Override
-    public void onCreate(SQLiteDatabase db) {
-        db.execSQL(SHAPES_TABLE_CREATE);
-    }
+
 
     //couldn't afford to be this drastic in the real world
     @Override

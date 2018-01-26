@@ -77,7 +77,8 @@ public class ViewShapes extends Fragment implements LoaderManager.LoaderCallback
                         if (selectedShapeDrawing.equals("Line")) {
                             dX = 5; dY = 5;
                             storeShape("Circle", x, y, dX, dY);
-                        }else if (selectedShapeDrawing.equals("Rectangle") || selectedShapeDrawing.equals("SLine") || selectedShapeDrawing.equals("Oval")){
+                        }
+                        else if (selectedShapeDrawing.equals("Rectangle") || selectedShapeDrawing.equals("SLine") || selectedShapeDrawing.equals("Oval")){
                             dX = x - mLastTouchX; dY = y - mLastTouchY;
                             showShapeTemp(selectedShapeDrawing, mLastTouchX, mLastTouchY, dX, dY);
                         } else if (selectedShapeDrawing.equals("Circle")){

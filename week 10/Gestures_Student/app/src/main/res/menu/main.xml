@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/draw_circle"
+        android:icon="@drawable/ic_circle_white"
+        android:title=""
+        app:showAsAction="always"
+        />
+    <item
+        android:id="@+id/draw_rectangle"
+        android:icon="@drawable/ic_square_black"
+        android:title=""
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/draw_line"
+        android:icon="@drawable/ic_line_black"
+        android:title="Draw Freehand Line"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/show_Color_selector"
+        android:icon="@drawable/md_blue_500"
+        android:title=""
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/add_shape"
+        android:icon="@drawable/ic_add_white_48px"
+        android:title="Add New Shape"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/edit_delete_shape"
+        android:icon="@drawable/ic_mode_edit_white_48px"
+        android:title="Delete/Edit Shapes"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/delete_all"
+        android:icon="@drawable/ic_delete"
+        android:title="Delete All Shapes"/>
+</menu>

@@ -86,9 +86,9 @@ public class MainActivity extends AppCompatActivity {
         // Add the fragments to their parent 'fragment_container' FrameLayout
         //
         getSupportFragmentManager().beginTransaction()
-           .add(R.id.fragment_top, viewShapes, "viewFragment")
-           .addToBackStack("viewFragment")
-           .commit();
+                                   .add(R.id.fragment_top, viewShapes, "viewFragment")
+                                   .addToBackStack("viewFragment")
+                                   .commit();
 
         getSupportFragmentManager().beginTransaction()
            .add(R.id.fragment_bottom, newShape, "addFragment")
@@ -181,7 +181,7 @@ public class MainActivity extends AppCompatActivity {
                             //by the color value, get the name of the color, which is the name of the color picker icon
                             String colorName = getColorName(selectedColor);
                             //change the icon based on the color
-                            myMenu.getItem(3).setIcon(getResources().getIdentifier(colorName, "drawable", getPackageName()));
+                            myMenu.getItem(4).setIcon(getResources().getIdentifier(colorName, "drawable", getPackageName()));
                         }
                     }
                 }).build().show(this.getSupportFragmentManager(), "");
