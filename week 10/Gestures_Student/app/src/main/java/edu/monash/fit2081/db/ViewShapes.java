@@ -276,8 +276,9 @@ public class ViewShapes extends Fragment implements LoaderManager.LoaderCallback
         @Override
         public boolean onScale(ScaleGestureDetector detector) {
             //Log.d(DEBUG_TAG, "onScale " + detector.getScaleFactor());
-            scale *= detector.getScaleFactor();
-
+            scale = detector.getScaleFactor();
+            int scaleFactor = (int) (scale * 100);
+            updateLastShape(-1, -1, scaleFactor, scaleFactor, scaleFactor, true);
             return true;
         }
 
