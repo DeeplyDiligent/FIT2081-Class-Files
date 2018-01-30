@@ -16,6 +16,7 @@ public class countryActivity extends AppCompatActivity {
         wikipedia.loadUrl(getIntent().getStringExtra("url"));
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
+
     @Override
     public boolean onSupportNavigateUp(){
         finish();

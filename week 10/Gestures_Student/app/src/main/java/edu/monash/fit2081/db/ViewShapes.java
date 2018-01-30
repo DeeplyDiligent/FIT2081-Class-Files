@@ -197,7 +197,7 @@ public class ViewShapes extends Fragment implements LoaderManager.LoaderCallback
             } else {
                 topLeftTouchDone = false;
             }
-            return super.onSingleTapUp(e);
+            return super.onSingleTapConfirmed(e);
         }
 
         @Override
