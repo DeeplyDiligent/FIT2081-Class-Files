@@ -7,6 +7,7 @@ This instructs Android to execute onDraw at its earliest convenience (if it's ne
 package edu.monash.fit2081.db;
 
 import android.support.v4.view.MotionEventCompat;
+import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
 import android.content.Context;
@@ -23,6 +24,12 @@ public class CustomView extends View {
     public Canvas canvas;
     public ShapeValues[] shapes = null;
     public int numberShapes = 0;
+
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        return super.onTouchEvent(event);
+
+    }
 
     public CustomView(Context context) {
         super(context);

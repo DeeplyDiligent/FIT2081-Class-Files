@@ -1,11 +1,14 @@
 package deeplydiligent.database_3_student;
 
 import android.content.ContentValues;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteQueryBuilder;
 import android.net.Uri;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
@@ -29,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
     int maxAreaRect = 0;
     int numberOfRect = 0;
     Cursor c;
+    int charisAge = 19;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,11 +65,31 @@ public class MainActivity extends AppCompatActivity {
         rect.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                onRetrieveRect();
-                displayText.setText("There are " + numberOfRect + " rectangles. \nMax area is " + maxAreaRect + ".");
+//                onRetrieveRect();
+                charisAge += 1;
+                displayText.setText("Charis age is " + charisAge );
+
             }
         });
 
+    }
+    @Override
+    public void onSaveInstanceState( Bundle outState) {
+        super.onSaveInstanceState(outState);
+
+        SharedPreferences sharedPreferences = getSharedPreferences("age_data",Context.MODE_PRIVATE);
+//        SharedPreferences sharedPreferences = getPreferences(Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putInt("age", charisAge);
+        editor.commit();
+
+    }
+    @Override
+    public void onRestoreInstanceState( Bundle inState) {
+        super.onRestoreInstanceState(inState);
+        SharedPreferences sharedPreferences = getSharedPreferences("age_data",Context.MODE_PRIVATE);
+        sharedPreferences.getInt("age", 12);
+        displayText.setText("age "+charisAge);
     }
 
     private void onRetrieveCircles() {

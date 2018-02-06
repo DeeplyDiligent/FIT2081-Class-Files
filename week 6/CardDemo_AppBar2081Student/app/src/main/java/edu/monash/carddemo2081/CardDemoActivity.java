@@ -4,14 +4,18 @@ import android.os.Bundle;
 
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.design.widget.CollapsingToolbarLayout;
+import android.view.View;
 
-public class CardDemoActivity extends AppCompatActivity {
+import java.util.zip.Inflater;
+
+public class CardDemoActivity extends AppCompatActivity implements View.OnClickListener{
 
     RecyclerView recyclerView;
     RecyclerView.LayoutManager layoutManager;
@@ -33,7 +37,7 @@ public class CardDemoActivity extends AppCompatActivity {
         collapsingToolbarLayout.setContentScrimColor(ContextCompat.getColor(this, R.color.colorPrimaryDark));
         recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
 
-        layoutManager = new LinearLayoutManager(this);  //A RecyclerView.LayoutManager implementation which provides similar functionality to ListView.
+        layoutManager = new GridLayoutManager(this,2);  //A RecyclerView.LayoutManager implementation which provides similar functionality to ListView.
         recyclerView.setLayoutManager(layoutManager);   // Also StaggeredGridLayoutManager and GridLayoutManager or a custom Layout manager
 
         adapter = new RecyclerAdapter();
@@ -60,5 +64,10 @@ public class CardDemoActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onClick(View v) {
+
     }
 }

@@ -4,6 +4,7 @@ package edu.monash.fit2081.db;
 
 import android.content.ContentResolver;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Point;
 import android.os.Bundle;
 import android.support.annotation.ColorInt;
@@ -13,6 +14,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.Display;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.RelativeLayout;
 
@@ -46,7 +49,6 @@ public class MainActivity extends AppCompatActivity {
 
         // to be used by delete all shapes
         resolver = getApplicationContext().getContentResolver();
-
 
         arColorsNames = getResources().getStringArray(R.array.colorNames);
         arColorsValues = getResources().getIntArray(R.array.colorValues);
@@ -94,6 +96,10 @@ public class MainActivity extends AppCompatActivity {
         getSupportFragmentManager().beginTransaction()
            .add(R.id.fragment_bottom, newShape, "addFragment")
            .commit();
+    }
+    public void onClick(View view){
+        Button btn = (Button) view;
+        btn.setText("clicked");
     }
 
     //OPTIONS MENU STUFF AND RELATED METHODS

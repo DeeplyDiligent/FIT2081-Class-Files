@@ -16,7 +16,7 @@ import android.widget.TextView;
 import edu.monash.fit2081.db.provider.SchemeShapes;
 
 
-public class    ItemCursorAdapter extends CursorAdapter {
+public class ItemCursorAdapter extends CursorAdapter {
 
     private Context myContext;
     private FragmentManager myFragmentManager;

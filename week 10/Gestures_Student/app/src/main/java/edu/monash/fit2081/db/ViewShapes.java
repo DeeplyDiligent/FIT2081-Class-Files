@@ -61,6 +61,7 @@ public class ViewShapes extends Fragment implements LoaderManager.LoaderCallback
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        savedInstanceState.putInt("key",101);
         customView = new CustomView(getContext());
         mDetector = new GestureDetector(getContext(), new MyGestureListener());
         mScaleDetector = new ScaleGestureDetector(getContext(), new myScaleListener());
@@ -190,14 +191,14 @@ public class ViewShapes extends Fragment implements LoaderManager.LoaderCallback
             boolean topleft = (y <= height/16)&&(x <= width/16) ;
             boolean bottomright = (x >= 15 * width/16) && (y >= 15 * height/16);
 
-            if (topleft ){
+            if (topleft){
                 topLeftTouchDone = true;
             } else if (topLeftTouchDone && bottomright) {
                 resolver.delete(SchemeShapes.Shape.CONTENT_URI, null, null);
             } else {
                 topLeftTouchDone = false;
             }
-            return super.onSingleTapConfirmed(e);
+            return true;
         }
 
         @Override

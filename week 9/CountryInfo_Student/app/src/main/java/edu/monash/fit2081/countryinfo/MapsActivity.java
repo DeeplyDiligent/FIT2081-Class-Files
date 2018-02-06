@@ -25,7 +25,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     private Geocoder geocoder;
 
     SupportMapFragment mapFragment;
-
+    List<Address> addresses = new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -64,7 +64,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
                 String selectedCountry = "";
 
 
-                List<Address> addresses = new ArrayList<>();
+
                 try {
                     //The results of getFromLocation are a best guess and are not guaranteed to be meaningful or correct.
                     // It may be useful to call this method from a thread separate from your primary UI thread.
@@ -84,18 +84,16 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
                     actionFlag = true;
                 }
 
-                Snackbar.make(mapFragment.getView(), msg, Snackbar.LENGTH_LONG).setAction("Details", (actionFlag) ? (new ActionOnClickListener(selectedCountry)) : null).show();
+                Snackbar.make(mapFragment.getView(), msg, Snackbar.LENGTH_LONG).setAction("Details", (actionFlag) ? (new MyListener(addresses.get(0).getCountryName())) : null).show();
             }
         });
     }
 
-    //Custom onclicklistener to accept 'selectedcountry' as parameter
-    public class ActionOnClickListener implements View.OnClickListener {
-
+    public class MyListener implements View.OnClickListener{
         String country;
 
-        public ActionOnClickListener(String country) {
-            this.country = country; //this refers to the nested class's instance not the an instance of the enclosing class
+        public MyListener (String usercountry){
+            this.country = usercountry;
         }
 
         @Override
@@ -103,6 +101,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
             Intent intent = new Intent(mapFragment.getContext(), CountryDetails.class);
             intent.putExtra("country", country);
             startActivity(intent);
+
         }
     }
 }

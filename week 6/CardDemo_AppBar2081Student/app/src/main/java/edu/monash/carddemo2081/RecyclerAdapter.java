@@ -69,14 +69,13 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
     };
 
     @Override
-    public ViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
+    public ViewHolder onCreateViewHolder(ViewGroup viewGroup, int typeOfView) {
         View v = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.card_layout, viewGroup, false); //CardView inflated as RecyclerView list item
-        ViewHolder viewHolder = new ViewHolder(v);
-        return viewHolder;
+        return new ViewHolder(v);
     }
 
     @Override
-    public void onBindViewHolder(final ViewHolder viewHolder, final int position) {
+    public void onBindViewHolder(final ViewHolder viewHolder, int position) {
         viewHolder.itemImage.setImageResource(images[position]);
         viewHolder.itemTitle.setText(clubNames[position]);
         viewHolder.itemTable.setVisibility(View.GONE);
@@ -106,7 +105,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
         viewHolder.stadiumText.setOnClickListener(new View.OnClickListener() { //set back to itemView for students
             @Override public void onClick(View v) {
 
-                Snackbar.make(v, grounds[position] + " capacity: " + groundCapacities[position], Snackbar.LENGTH_LONG).setAction("Action", null).show();
+                Snackbar.make(v, grounds[viewHolder.getAdapterPosition()] + " capacity: " + groundCapacities[viewHolder.getAdapterPosition()], Snackbar.LENGTH_LONG).setAction("Action", null).show();
             }
         });
 

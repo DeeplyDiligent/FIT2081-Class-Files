@@ -100,7 +100,7 @@ public class ShapesDbHelper extends SQLiteOpenHelper {
 
     public Cursor getAllShapes() {
         SQLiteDatabase db = this.getReadableDatabase();
-        String query_ = "select * from " + SchemeShapes.Shape.TABLE_NAME +;
+        String query = "select * from " + SchemeShapes.Shape.TABLE_NAME +;
 
         Cursor shapes = db.rawQuery(query, null);
 
